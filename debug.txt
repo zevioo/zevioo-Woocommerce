@@ -1,0 +1,52 @@
+New order: #49, request: Array
+(
+    [USR] => PrestaShop_API
+    [PSW] => FRde467GTRerFD
+    [OID] => 49
+    [PDT] => 2017-11-29 13:43:25
+    [DDT] => 
+    [EML] => vnphpexpert@gmail.com
+    [FN] => Quang
+    [LN] => Bui
+    [ITEMS] => Array
+        (
+            [0] => Array
+                (
+                    [CD] => 32
+                    [EAN] => prod1
+                    [NM] => Test product
+                    [IMG] => http://localhost/wordpress_48/wp-content/uploads/2017/11/4-large_default.jpg
+                    [PRC] => 10
+                    [QTY] => 2
+                )
+
+        )
+
+)
+, result: Array
+(
+    [data] => stdClass Object
+        (
+            [MSG] => 
+            [RES] => 0
+        )
+
+    [http_status] => 200
+)
+Cancel Order : #49, request: Array
+(
+    [USR] => PrestaShop_API
+    [PSW] => FRde467GTRerFD
+    [OID] => 49
+    [CDT] => 2017-11-29 13:43:55
+)
+, result: Array
+(
+    [data] => stdClass Object
+        (
+            [MSG] => 
+            [RES] => 0
+        )
+
+    [http_status] => 200
+)
