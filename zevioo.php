@@ -3,13 +3,13 @@
 Plugin Name: Zevioo.com
 Plugin URI: 
 Description: Send Order Details to Zevioo via API
-Version: 1.0.1
-Author: vnphpexpert
-Author URI: 
+Version: 1.1.1
+Author: Zevioo
+Author URI: https://zevioo.com
 */
 
 
-/*  Copyright 2012  vnphpexpert  (email : vnphpexpert@gmail.com)
+/*  Copyright 2018  zevioo  
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -53,6 +53,9 @@ function action_send_order_to_zevioo($order_id) {
 	
 		$products_array[] = $product_item;
 	}
+
+	
+	$last_name = get_post_meta( $order_id, '_billing_last_name', true );
 	
 	$orderData = array(
 				'USR' => get_option('zevioo_username'),
@@ -62,7 +65,7 @@ function action_send_order_to_zevioo($order_id) {
 				'DDT' => '',
 				'EML' => get_post_meta( $order_id, '_billing_email', true ),
 				'FN' => get_post_meta( $order_id, '_billing_first_name', true ),
-				'LN' => get_post_meta( $order_id, '_billing_last_name', true ),
+				'LN' => substr($last_name,0,1),
 				'ITEMS' => $products_array
 	);
 	
